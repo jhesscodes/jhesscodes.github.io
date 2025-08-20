@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fix Box Assistência Técnica</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+  }
+
+  header {
+    background-color: #4285F4;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  header img {
+    height: 50px;
+  }
+
+  header .contact-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+  }
+
+  section {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+  }
+
+  .card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1 1 200px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  .brands img {
+    height: 40px;
+    margin: 10px;
+    vertical-align: middle;
+  }
+
+  .buttons {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .whatsapp {
+    background-color: #25D366;
+  }
+  .whatsapp:hover { background-color: #1ebe5d; }
+
+  .maps {
+    background-color: #4285F4;
+  }
+  .maps:hover { background-color: #3367d6; }
+
+  .reviews {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+
+  .reviews-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    width: 100%;
+    animation: scrollReviews 60s linear infinite;
+  }
+
+  .reviews:hover .reviews-inner {
+    animation-play-state: paused;
+  }
+
+  .review {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+
+  .review strong { display: block; margin-bottom: 5px; }
+  .stars { color: #FFD700; margin-bottom: 5px; }
+
+  @keyframes scrollReviews { 0% { top:0; } 100% { top:-100%; } }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4285F4;
+    color: white;
+  }
+
+  .location iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .cards { flex-direction: column; align-items: center; }
+    header { flex-direction: column; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="imagens/e1e48a59-7b80-448c-a319-2051198db4c6.png" alt="Logo FixBox">
+  </div>
+  <div class="contact-links">
+    <a href="tel:+5551990186258">📞 51 99018-6258</a>
+    <a href="https://wa.me/5551990186258" target="_blank">💬 WhatsApp</a>
+  </div>
+</header>
+
+<section id="banners">
+  <img src="imagens/4022865f-aa4e-4683-b677-6e0570d06040.png" alt="Marcas atendidas" style="width:100%; border-radius:10px; margin-bottom:20px;">
+  <img src="imagens/3a273c1e-b296-4097-b9f3-cfc75651cc1b.png" alt="Serviços especializados" style="width:100%; border-radius:10px;">
+</section>
+
+<section id="servicos">
+  <h2>Nossos Serviços</h2>
+  <div class="cards">
+    <div class="card">Máquinas de Lavar</div>
+    <div class="card">Micro-ondas</div>
+    <div class="card">Refrigeradores</div>
+    <div class="card">Secadoras</div>
+    <div class="card">Ar-Condicionado</div>
+  </div>
+</section>
+
+<section id="depoimentos">
+  <h2>O que dizem nossos clientes</h2>
+
+  <div class="reviews">
+    <div class="reviews-inner">
+      <div class="review"><strong>Jhessika Santos</strong><div class="stars">⭐⭐⭐⭐⭐</div>Ótima assistência! Consertaram minha máquina de lavar e minha geladeira! Trabalho impecável ❤️1</div>
+      <div class="review"><strong>Gabriel Gonçalves</strong><div class="stars">⭐⭐⭐⭐⭐</div>Excelente serviço, trocou a peça necessária e fez a limpeza da geladeira, super recomendo ❤️1</div>
+      <div class="review"><strong>Artur Henz</strong><div class="stars">⭐⭐⭐⭐⭐</div>Profissional super qualificado e honesto! Resolveu meu problema rapidamente. ❤️1</div>
+      <div class="review"><strong>Sabrina Galdino</strong><div class="stars">⭐⭐⭐⭐⭐</div>Muito atenciosos e honestos, serviço rápido e eficaz. ❤️1</div>
+      <div class="review"><strong>Júlia Silva</strong><div class="stars">⭐⭐⭐⭐⭐</div>Serviço incrível e de confiança. Minha máquina de lavar tá funcionando direitinho ❤️1</div>
+      <!-- Adicione mais avaliações aqui -->
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <h2>Localização</h2>
+  <div class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.955851923883!2d-51.22512578488767!3d-30.04389268189881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979a5d30e92ed%3A0x0!2sRua%20Barbedo%2C%2095%20-%20Menino%20Deus%2C%20Porto%20Alegre!5e0!3m2!1spt-BR!2sbr!4v1692530000000" allowfullscreen></iframe>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 FixBox Assistência Técnica | Porto Alegre, RS
+</footer>
+
+</body>
+</html>
